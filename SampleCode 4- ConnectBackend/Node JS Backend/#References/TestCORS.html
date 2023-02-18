@@ -1,0 +1,28 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script>  
+         $(document).ready(function () {  
+             $("#Load").click(function () {  
+                 $.ajax({  		 
+                     url: 'http://localhost:8081/movie/movieid/'+$('#id').val() ,  
+                     type: 'GET',  
+                     dataType: 'json',  
+                     success: function (data, textStatus, xhr) {  
+                         console.log(data); 
+	           $("#movieData").html(data[0].name);
+						 					 
+                     },  
+                     error: function (xhr, textStatus, errorThrown) {  
+                         console.log('Error in Operation');  
+                     }  
+                 });  
+             });  
+         });  
+    </script>  
+</head>  
+<body>  
+
+        <div id='movieData'></div>
+        ID:<input type="text" id="id"/><br>
+        <input type="button" id="Load" value="Load Data" />  
+</body>  
+</html>

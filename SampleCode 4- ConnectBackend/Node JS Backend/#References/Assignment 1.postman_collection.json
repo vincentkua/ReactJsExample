@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "e6c80add-1752-41d4-8899-4a1ec67e6a0a",
+		"name": "Assignment 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21970264"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Post admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "spadmin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "xyz123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User (with bearer Token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzExOTY5MDcsImV4cCI6MTY3MTI0MDEwN30.68WCqciMlwSKq_-n9T80KdvCmOAR8aUGWM71LBSl0w4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User with Id (with bearer Token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzEzNTUyNTUsImV4cCI6MTY3MTM5ODQ1NX0.YgfeWoww9n278oydq1k_QRNRMnP-56QLGZVXVa4oqNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST User (with bearer Token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzE0NDkxODUsImV4cCI6MTY3NDA0MTE4NX0.CgDYo15vTJVs3Ih79YAmJz27iyo0mjSxtYtJ1HzfRP4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mary@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "mary",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "member",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT User (with bearer Token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzEzNjkyNzEsImV4cCI6MTY3MTQxMjQ3MX0.n4oP_FU4e8H99NHxJFtqQMReHJz1OD-YligXhXNaIL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "spadmin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "xyz123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE User (with bearer Token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzEzNjkyNzEsImV4cCI6MTY3MTQxMjQ3MX0.n4oP_FU4e8H99NHxJFtqQMReHJz1OD-YligXhXNaIL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "spadmin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "xyz123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Get Movie (all)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie (movie_id search)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie/movieid/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"movieid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie (active)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie (genreId)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie/genreid/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"genreid",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie (substringsearch)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie/substring/black",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"substring",
+								"black"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Movie (add movie with token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzE0NjAyNTMsImV4cCI6MTY3NDA1MjI1M30.vWFM4oxM_3-RdAT5XzsM1ol5e0i2hb0IGz7f9mYptTA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Emancipation 7",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A runaway slave forges through the swamps of Louisiana on a tortuous journey to escape plantation owners that nearly killed him.",
+									"type": "text"
+								},
+								{
+									"key": "release_date",
+									"value": "2022-12-09",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "movie5.jpg",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "Y",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/movie/addmovie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"addmovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Movie (Update by movie id)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzE0NjAyNTMsImV4cCI6MTY3NDA1MjI1M30.vWFM4oxM_3-RdAT5XzsM1ol5e0i2hb0IGz7f9mYptTA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "update movie name",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "update movie description test",
+									"type": "text"
+								},
+								{
+									"key": "release_date",
+									"value": "2022-12-19",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "movie12.jpg",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "Y",
+									"type": "text"
+								},
+								{
+									"key": "date_inserted",
+									"value": "2022-12-19",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/movie/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Movie (by movie id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movie/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movie",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "Get Genre (all)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Genre (add genre with token)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzEzODA1NjQsImV4cCI6MTY3MTQyMzc2NH0.uyDyq2xgd1flgexKEbY7upqABlWi6CRmyyLIoDqE1sY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "fiction3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "fiction movie category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/genre/addGenre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"genre",
+								"addGenre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Genre (by genre id)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzE0NjAyNTMsImV4cCI6MTY3NDA1MjI1M30.vWFM4oxM_3-RdAT5XzsM1ol5e0i2hb0IGz7f9mYptTA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/genre/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"genre",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

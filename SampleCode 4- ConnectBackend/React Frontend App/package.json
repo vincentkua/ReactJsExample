@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "@babel/cli": "^7.19.3",
+        "@babel/core": "^7.19.3",
+        "@babel/preset-react": "^7.18.6",
+        "babel-plugin-add-import-extension": "^1.6.0"
+    },
+    "scripts": {
+        "start": "npx babel --watch src --out-dir output --presets @babel/preset-react --plugins=babel-plugin-add-import-extension"
+    }
+}
